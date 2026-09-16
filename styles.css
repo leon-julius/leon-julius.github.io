@@ -309,3 +309,85 @@ footer a:hover {
     transform: scale(1.1);
     filter: brightness(1.2);
 }
+
+#about p {
+    color: var(--text-light);
+}
+
+.skill-group-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.25rem;
+    color: var(--highlight-color);
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+}
+
+.case-study {
+    background: var(--background-light);
+    color: var(--text-dark);
+    border: 1px solid var(--primary-color);
+    border-left-width: 6px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0 1.5rem;
+}
+
+.case-study header {
+    background-color: rgba(61, 64, 91, 0.06);
+    border-color: rgba(61, 64, 91, 0.15);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.case-study footer {
+    background-color: transparent;
+    border-top: 1px solid rgba(61, 64, 91, 0.15);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.case-study h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.case-study header p {
+    margin-bottom: 0;
+}
+
+.role-meta {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.case-study h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.case-study p,
+.case-study ul {
+    max-width: 70ch;
+}
+
+.case-study ul {
+    margin-bottom: 0;
+}
+
+.case-study li {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.case-study footer small {
+    color: var(--text-dark);
+}
