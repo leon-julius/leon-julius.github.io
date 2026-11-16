@@ -198,9 +198,15 @@ h3 {
 /* Skills Section */
 .skill-groups {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.5rem 2rem;
     margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .skill-groups {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-group .skill-group-title {
@@ -260,7 +266,6 @@ h3 {
 }
 
 .job ul {
-    max-width: 75ch;
     margin-bottom: 0;
 }
 
@@ -285,6 +290,34 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Equal-height article cards with links aligned at the bottom */
+.grid > div {
+    display: flex;
+}
+
+.grid figure {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0;
+}
+
+.grid figcaption {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0.75rem 0 0;
+}
+
+.grid figcaption p {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.grid figcaption a {
+    margin-top: auto;
 }
 
 .grid > div:hover {
@@ -344,6 +377,10 @@ form button:hover {
     transform: scale(1.05);
 }
 
+#contact {
+    margin-bottom: 0;
+}
+
 #contact label {
     color: var(--text-light);
 }
@@ -355,29 +392,38 @@ form button:hover {
     margin-top: 1rem;
 }
 
-/* Footer */
-footer {
+/* Footer (page footer only, so card footers keep their own layout) */
+body > footer {
     background-color: var(--primary-dark-color);
-    padding: 1rem 0;
+    padding: 1rem 0 2rem;
     color: var(--text-light);
     text-align: center;
     width: 100%;
 }
 
-footer a {
+body > footer a {
     text-decoration: none;
     color: var(--primary-color);
 }
 
-footer a:hover {
+body > footer a:hover {
     color: var(--text-light);
 }
 
 /* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
 .social-links a img {
     width: auto;
-    height: 25px;
-    margin: 0 5px;
+    height: 32px;
+    padding: 4px;
+    background: var(--background-light);
+    border-radius: 6px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -418,10 +464,11 @@ footer a:hover {
 }
 
 .case-study footer {
-    background-color: transparent;
+    background-color: rgba(61, 64, 91, 0.06);
     border-top: 1px solid rgba(61, 64, 91, 0.15);
     padding-top: 1rem;
     padding-bottom: 1rem;
+    text-align: left;
 }
 
 .case-study h4 {
@@ -449,9 +496,15 @@ footer a:hover {
     margin-bottom: 0.5rem;
 }
 
-.case-study p,
-.case-study ul {
-    max-width: 70ch;
+/* Cards without a footer: trim Pico's large bottom padding */
+.job,
+.case-study:not(:has(> footer)) {
+    padding-bottom: 1.5rem;
+}
+
+.job > :last-child,
+.case-study > :last-child {
+    margin-bottom: 0;
 }
 
 .case-study ul {
